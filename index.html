@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <!--Head-->
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" type="text/css" href="portfolio_css.css">
+        <tile>Hi,Bye!</tile>
+    </head>
+
+    <!--Body-->
+    <body class="Background">
+
+    <!--Navbar-->
+    <div class="Navbar">
+        <a class="active" href="#Home">Home</a>
+        <a href="#Slideshow">Slideshow</a>
+        <a href="#About">About</a>
+        <a href="#GitHub">Github</a>
+        <!--Onclicke and ondbclick functions added to open and close the contact from-->
+        <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
+    </div>
+
+    <!--Breaks inserted to add space between navbar and the first heading-->
+    
+
+    
+
+    <!--Video text-->
+    <div class="Video_Text">
+        <h1 class="white-text">Cody Harris Portfolio</h1>
+        <strong>
+            <p class="center">
+                <br>
+                <br>
+                My name is Cody Harris. Welcome to my portfolio website. On it, I will tell you about my background and experience.
+                <br>
+                <br>Thank you for stopping by and enjoy!
+            </p>
+        </strong>
+    </div>
+
+    <!--SlideShow secton-->
+    <div id="Slideshow">
+        <div id="Slideshow_Background">
+            <div id="Slideshow_Container">
+                <!--Slide 1 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="pictures/new_pic.jpg" alt="pic of me">
+                    <div class="text">I am avilable to assist you on your project!</div>
+                </div>
+                <!--Slide 2 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="pictures/html_css_js.png" alt="HTML, CSS, and JS logos">
+                    <div class="text">I am a full-stack software developer,<br> trained in<br>HTML,CSS,JavaScript,</div>
+                </div>
+                <!--Slide 3 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="pictures/py.jpg" alt="python logo">
+                    <div class="text">the popular programming language Python,</div>
+                </div>
+                <!--Slide 4 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="pictures/csharp.png" alt="C# logo">
+                    <div class="text">C#, .NET Framework, ASP.NET, MVC, </div>
+                </div>
+                <!--Slide 5 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="pictures/sql.png" alt="SQL logo">
+                    <div class="text">back end development, databases and SQL.</div>
+                </div>
+                <!--Slide 6 of 6 -->
+                <div class="mySlides fade">
+                    <img class="Slideshow_Images" src="pictures/SDLC.jpg" alt="some picture">
+                    <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Contact me now!</a></div>
+                </div>
+                <!--Previous and next buttons-->
+                <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!--adds a space bw slideshow and dots-->
+
+                <!--Slideshow dots theres are another way for users to nav through the slideshow-->
+                <div style="text-align: center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+                <span class="dot" onclick="currentSlide(6)"></span>
+            </div>
+         </div>
+    </div>
+    
+
+    <!--About Section-->
+    <div class="Row" id="About">
+        <!--Left Column-->
+        <div class="Column_2">
+            <img src="pictures/aboutme.png" alt="lights">
+        </div>
+        <!--Right Column-->
+        <div class="Column_1">
+            <h1>About</h1>
+            <p>
+                I am a person of what ever I put my mind too. I decicded to take up software programming and try something new and intresting to me.
+                <br>
+                I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+                <a href="#Contact">Contact</a> me below!
+            </p>
+        </div>
+    </div>
+
+    <!--GitHub Section-->
+    <div class="Row" id="GitHub">
+        <!--Left Column-->
+        <div class="Column_1">
+            <h1>GitHub</h1>
+            <p>
+                You can check out my GitHub projects here:
+                <br>
+                <p class="center"><a href="https://github.com/codhharris713" target="_blank">Cody Harris GitHub</a></p>
+            </p>
+        </div>
+        <!--Right Column-->
+        <div class="Column_2">
+            <a href="https://github.com/the-tech-academy" target="_blank"><img src="pictures/gitcat.png" alt="web"></a>
+        </div>
+    </div>
+
+    <!--Python Phone Book Section-->
+    <div class="Row" id="Python Phone Book">
+        <!--Left Column-->
+        <div class="Column_1">
+            <h1>Python Phone Book</h1>
+            <p>
+                This project functions as a phone book for a user. It saves a contact's name,phone number, and email address in a database and allows the user to update and delete previously stored entries.
+                <br>
+                <p class="center"><a href="https://github.com/codhharris713/Basic-Python-Projects" target="_blank">Python Phone Book</a></p>
+            </p>
+        </div>
+        <!--Right Column-->
+        <div class="Column_2">
+            <a href="https://github.com/codhharris713/Basic-Python-Projects" target="_blank"><img src="pictures/phonebook.png" alt="phonebook"></a>
+        </div>
+    </div>
+
+    <!--Python File Transfer Section-->
+    <div class="Row" id="Python Check Files GUI">
+        <!--Left Column-->
+        <div class="Column_1">
+            <h1>Python Check Files GUI</h1>
+            <p>
+                This project allows the user to choose transfer all .txt files from one chosen directory to another. All files that are moved will be saved in a database.
+                <br>
+                <p class="center"><a href="https://github.com/codhharris713/Basic-Python-Projects" target="_blank">Python Check Files GUI</a></p>
+            </p>
+        </div>
+        <!--Right Column-->
+        <div class="Column_2">
+            <a href="https://github.com/codhharris713/Basic-Python-Projects" target="_blank"><img src="pictures/checkfiles.png" alt="checkfiles"></a>
+        </div>
+    </div>
+        <!--C-Sharp-Projects-->
+    <div class="Row" id="C-Sharp-Repo">
+        <!--Left Column-->
+        <div class="Column_1">
+            <h1>C-Sharp Projects</h1>
+            <p>
+                These are a couple of projects I worked on using C Sharp and the .NetFrame Work. A card game with a dealer, deck, and a way to shuffle cards and a car insurance web app that takes user information and a quote is calculated based on business logic.
+                <br>
+                <p class="center"><a href="https://github.com/codhharris713/C-Sharp-Projects-and-Drills" target="_blank">C-Sharp Projects</a></p>
+            </p>
+        </div>
+        <!--Right Column-->
+        <div class="Column_2">
+            <a href="https://github.com/codhharris713/C-Sharp-Projects-and-Drills" target="_blank"><img src="pictures/card-icon.png" alt="csharp"></a>
+        </div>
+    </div>
+
+        <!--Java-Script-Projects-->
+        <div class="Row" id="Java-Script-Projects">
+            <!--Left Column-->
+            <div class="Column_1">
+                <h1>Java Script Projects</h1>
+                <p>
+                    These are some of the projects I made using JavaScript. They include a simple game of tic tac toe with sound effects, a simple calculator, and a pizza menu that you can customize toppings and it will calculate a price.
+                    <br>
+                    <p class="center"><a href="https://github.com/codhharris713/JavaScript-Projects-" target="_blank">Java-Script-Projects</a></p>
+                </p>
+            </div>
+            <!--Right Column-->
+            <div class="Column_2">
+                <a href="https://github.com/codhharris713/JavaScript-Projects-" target="_blank"><img src="pictures/calculator.png" alt="Java-Script-Projects"></a>
+            </div>
+        </div>
+
+     <!--Contact Section-->
+    <div id="Contact">
+        <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+        <div class="form-popup" id="myForm">
+        <!--This specifies where and how to send the form date; we are leaving it blank-->
+            <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!--Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute-->
+                <h1>Conact</h1>
+                <label for="name"><b>Name</b></label>
+                     <input type="text" placeholder="Please enter your name here" name="name" required>
+                <label for="phone"><b>Phone</b></label>
+                    <input type="text" placeholder="Type your phone number here" name="phone">
+                <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Please enter your email here" name="email" required>
+                <label for="message"><b>Message</b></label>
+                    <input type="text" placeholder="Type your message here" name="message" required>
+                
+                <button type="submit" class="btn">SUBMIT</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+            </form>
+        </div>
+     </div>
+
+     <!--Footer Section-->
+     <footer>
+         <p>
+             <p class="center"><a href="" target="_blank">Cody Harris</a></p>        
+             <br> 
+            </p>
+     </footer>
+     <script src="portfolio_js.js"></script>
+    </body>
+</html>

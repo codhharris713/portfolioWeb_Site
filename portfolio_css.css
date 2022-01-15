@@ -1,0 +1,520 @@
+/*================GENERAL STYLING=============*/
+/*affects entire document*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*BODY */
+body {
+    margin: 0%; 
+    opacity: 1;
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+    font-family: avant garde, Helvetica;
+    font-size: 1.5vw;
+    overflow-x: hidden;
+    user-select: none;
+    background-color: #F4F1DE;
+    background-image: linear-gradient(#81B29A, #F2CC8F, #F4F1DE);
+}
+
+/*HEADING 1 ELEMENTS */
+h1 {
+    text-transform: uppercase;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 3%;
+    color: #D1E8E2;
+}
+
+/* HEADING 1 ELEMENT HOVER EFFECT */
+h1:hover {
+    filter: grayscale(5%);
+    transform: scale(1.1);
+    transition: transfrom 1s;
+}
+
+/*styling for portfolio title text */
+.white-text {
+    color: #E07A5f;
+    padding-top: 10vh;
+}
+ 
+/*PARAGRAPH ELEMENTS*/
+p {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: justify;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+/*  PARAGRAPH ELEMENT HOVER EFFECT*/
+P:hover {
+    transition: transform 1s;
+    transform: scale(1.01);
+}
+
+/*center class - this applies to all centered text */
+.center {
+    text-align: center;
+}
+
+/*CENTER CLASS HOVER EFFECT - THIS ONLY AFFECTS THE QUOTE, GITHUB LINK, AND FOOTER*/
+.center:hover {
+    transition: transform 2s;
+    transform: scale(1.0);
+}
+
+/*ANACHOR ELEMENTS*/
+a {
+    color: #3D405B;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/*QUOTATION ELEMENTS*/
+q {
+    font-style: italic;
+}
+
+/*IMAGE ELEMENTS*/
+img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto auto auto auto;
+}
+
+/*IMAGE ELEMENT HOVER EFFECTS*/
+img:hover {
+    filter: grayscale(5%);
+    transition: transfrom 1s;
+    transform: scale(1.1);
+}
+
+/*MEDIA SCALE*/
+@media screen and (max-width: 576px) {
+    img {
+        height: 100px;
+        margin-top: 150px;
+    }
+}
+
+/*STYLING FOR FOOTER ELEMENT*/
+footer {
+    padding: 2%;
+    background-color: #81B29A;
+}
+
+/****END OF GENERAL STYLING****/
+
+/*NAVBAR STYLING*/
+.Navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNave 5s;
+}
+
+/*MOVENAVE ANIMATION EFFECT*/
+@keyframes moveNave {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+/*NAVBAR LINK*/
+.Navbar a {
+    float: left;
+    display: block;
+    color: #D1E8E2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    -webkit-animation: moveNavText 5.75;
+    animation: moveNavText 5.75;
+}
+
+/*MOVENAVTEXT ANIMATION EFFECT*/
+@keyframes moveNavText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+}
+
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%;
+        font-size: 12px;
+    }
+}
+/*NAVBAR HOVER EFFECTS*/
+.Navbar a.active {
+    background-color: #D9B08C;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*Navbar home button */
+.Navbar a.active {
+    background-color: darkgray;
+}
+/*****END NAVBAR STYLING****/
+
+
+
+/*TEXT OVER VIDEO */
+.Video_Text {
+    background: rgba(0, 0, 0, 0,5);
+    color: black;
+    width: 100%;
+    padding: 2vh;
+    position: relative;
+    -webkit-animation: moveVideoText 5.75s;
+    animation: moveVideoText 5,75s;
+}
+/* Not in use
+@keyframes moveVideoText {
+    from {top: -100vw;}
+    to {top: 0vw;}
+} */
+
+/*****END OF VIDEO STYLING*****/
+
+/*****Slideshow Stylinng*****/
+#Slideshow_Background {
+    background: rgba(255, 255, 255, .15);
+    backdrop-filter: blur(10px);
+}
+
+.mySlides {
+    display: none; /*this prevents the imgs from being displayed, we will use JS to display these */
+}
+/*Slideshow section*/
+#Slideshow_Container {
+    width: 30vw;
+    height: auto;
+    padding-top: 4%;
+    position: relative;
+    margin: auto;
+}
+
+/*imgs contained within the slideshow */
+.Slideshow_Images {
+    vertical-align: middle;
+    height: auto;
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: 100%;
+}
+
+/*Next and previous buttons */
+.Previous, .Next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 2vw;
+    color: darkseagreen;
+    font-weight: bold;
+    font-size: 1.5vw;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+}
+
+/*Positioning the next button on the right hand side*/
+.Next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/*hover effect on slide show buttons*/
+.Previous:hover, .Next:hover {
+    background-color: rgba(7, 3, 3, 0.8);
+    color: white;
+}
+
+/*Slideshow text */
+.text {
+    color: white;
+    padding: 1vw;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: monospace;
+    letter-spacing: .1vw;
+    font-size: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    font-weight: bold;
+    border-radius: 0px 0px 7px 7px;
+}
+
+/*Styling of the dots under the slideshow*/
+.dot {
+    cursor: pointer;
+    height: 1vw;
+    width: 1vw;
+    margin: .25vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    z-index: 1;
+}
+
+/*hover effect for slideshow dots*/
+.active, .dot:hover {
+    background-color: black;
+}
+
+/*fading animation for slideshow*/
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4;}
+    to {overflow: 1;}
+}
+
+@keyframes fade {
+    from {opacity: .4;}
+    to {opacity: 1;}
+}
+
+/****END Slideshow Styling***/
+
+/****TABLE STYLING****/
+* {
+    box-sizing: border-box;
+}
+
+.Column_1 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 450px; /*sets height of the column may need to be adjusted depending on text entered*/
+    background-color: #E07A5f;
+}
+
+@media screen and (max-width: 576px) {
+    .Column_1 {
+        overflow: auto;
+    }
+}
+
+.Column_2 {
+    float: left;
+    width: 50%;
+    padding: 1.6%;
+    height: 450px;
+    height: 400px;
+    background-color: #F4F1dE;
+}
+
+/*COLUMN TALL*/
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+.Row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/******END OF TABLE STYLING*****/
+
+/*****CONTACT FROM STYLING*****/
+/*Button used to open the contact form - fixed at bottom of screen */
+.Pop_Up_Button {
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;
+    background-color: white;
+    color: black;
+    border: solid black;
+    cursor: pointer;
+    -webkit-animation: movePopup 5s;
+    animation: movePopup 5s;
+}
+
+@keyframes movePopup {
+    from {right: -40vw; }
+    to {right: 1.75vw; }
+
+}
+
+@-webkit-keyframes movePopup {
+    from {right: -40vw; }
+    to {right: 1.75vw; }
+}
+
+/*styling for contact form*/
+.form-popup {
+    border: 3px solid #f0f1f0;
+    z-index: 8 ;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+}
+
+/*form styling*/
+.form-container {
+    max-width: 49vw;
+    padding: 1vw;
+    background-color: white;
+}
+
+/*input fields */
+.form-container input[type=text] {
+    width: 100%;
+    padding: .93vw;
+    margin: .6vw 0 .6vw 0;
+    border: none;
+    background: gainsboro;
+    font-size: 1vw;
+}
+
+/*General style for all buttons*/
+button {
+    font-family: "Trebuchet MS", Optima;
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw;
+    cursor:  pointer;
+    width: 100%;
+    height: auto;
+}
+
+/*hover effect for contact and submit buttons*/
+button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: black;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: silver;
+}
+
+/*submit button*/
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh; /*adds space bw submit button and close button*/
+}
+
+/*close button*/
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+/*Styling for close button on hover*/
+.form-container .cancel:hover {
+    color: white;
+    background-color: darkred;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
+}
+
+/*END OF CONTACT FORM STYLING*/
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --primary-color: #F2CC8f;
+    --secondary-color: #E07A5F;
+    --complimentary-color: #2E2473;
+  }
+  
+  .container {
+    min-height: 100vh;
+    position: relative;
+    width: 100vw;
+    display: flex;
+    background-color: var(--complimentary-color);
+    justify-content: center;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   position: relative;
+  }
+  
+  .white-text {
+    font-size: 100px;
+    color: var(--primary-color);
+    transform: translateY(-600px);
+    animation: 1.2s slideIn ease-in-out forwards 1s;
+    z-index: 10;
+    opacity: 0;
+    position: relative;
+  }
+  
+  .white-text::before {
+      content: '';
+      width: 0%;
+      height: 76px;
+      background-color: var(--secondary-color);
+      position: absolute;
+      bottom: -10px;
+      animation: 1s underline ease-in-out forwards 2s;
+      mix-blend-mode: screen;
+  }
+  
+  .overlay {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      bottom: 0;
+      opacity: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--secondary-color);
+      transform: scale(.5);
+      animation: .5s slideIn ease-in-out forwards, 1s skewBg ease-in-out;
+  }
+  
+  @keyframes skewBg {
+    0% {
+      transform: scale(.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes underline {
+    100% {
+      width: 100%;
+    }
+  }
+  
+  @keyframes slideIn {
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
